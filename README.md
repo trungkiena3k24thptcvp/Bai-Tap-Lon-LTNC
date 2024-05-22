@@ -2,6 +2,11 @@
 ## Giới Thiệu:
  Game thuộc thể loại bắn súng. Hãy cùng nhập vai nhân vật và chiến đấu với quái vật để bảo vệ thế giới.
  - [1. Bắt đầu game](#1-bắt-đầu-game)
+ - [2. Các thành phần](#2-các-thành-phần)
+ - [a. Nhân vật game:](#a-nhân-vật-game)
+ - [b. Quái vật:](#b-quái-vật)
+ - [c. Hướng dẫn:](#c-hướng-dẫn)
+ - [3. Về source code của game](#3-về-source-code-của-game)
 ## 1. Bắt đầu game
  - Màn hình Load Game:
    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/ce82dbd5-a5cc-44b1-b68e-ce0bd3746e03)
@@ -31,7 +36,25 @@
 ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/db22131a-dd8d-444f-97c5-f90b23f80a7e)
  - Boss là một con rồng ngàn tuổi khổng lồ
 ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/4c4eb677-c654-4836-8b3b-b44eaef4bbde)
-
+## c. Hướng dẫn:
+ - Để di chuyển nhân vật ta nhấn các phím hướng để di chuyển theo các hướng ta mong muốn.
+ - Nhấn phím 1 để bắn đạn.
+ - Khi ta có 2 loại đạn: nhấn F để bắn đạn đỏ và G để bắn đạn xanh.
+ - Khi ta chạm vào quái vật hoặc trúng đạn hay bị rơi xuống vực ta sẽ bị mất 1 mạng.
+ - Ta sẽ bất tử khoảng 1s sau khi hồi sinh.
+ - Khi hồi sinh nhân vật sẽ rơi từ trên trời xuống trước cách vị trí mà ta mất mạng.
+## 3. Về source code của game
+ - File CommonFunction.cpp và CommonFunction.h để chứa các hàm thông dụng, cơ bản nhất của game và các thông số.
+ - File GameMap.cpp và GameMap.h để tạo ra và hiển thị các map lên màn hình.
+ - File BaseObject.cpp và BaseObject.h để hiển thị các sự vật, background lên màn hình.
+ - File Character.cpp và Character.h để thiết lập các chức năng của nhân vật như di chuyển, bắn đạn, hiển thị, ...
+ - File PlayerPower.cpp và PlayerPower.h để kiểm soát các thông số của nhân vật.
+ - File PlayerMoney.cpp và PlayerMoney.h để kiểm soát tiền mà nhân vật kiếm được.
+ - File Explosion.cpp và Explosion.h để thiết lập các vụ nổ khi bắn trúng quái vật hoặc khi nhân vật bị bắn hay chạm vào quái vật.
+ - File BulletObject.cpp và BulletObject.h để thiết lập đạn cho các nhân vật hay quái vật.
+ - File ThreatObject.cpp và ThreatObject.h để thiết lập các thông số cho quái vật.
+ - File BossObject.cpp và BossObject.h để kiểm soát thông số của Boss.
+ - Và một vài file khác (Tải source code để biết thêm chi tiết).
 
 
 
