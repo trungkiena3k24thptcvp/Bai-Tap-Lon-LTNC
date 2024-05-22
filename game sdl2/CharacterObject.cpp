@@ -202,60 +202,6 @@ void CharacterObject::HandleInputAction(SDL_Event p_events, SDL_Renderer* screen
             }break;
         }
     }
-    if (p_events.type == SDL_MOUSEBUTTONDOWN) {
-        if (p_events.button.button == SDL_BUTTON_RIGHT) {
-            input_type.jump = 1;
-            input_type.down = 0;
-            sit_on_ground = false;
-            UpdateImagePlayer(screen);
-        }
-       /* else if (p_events.button.button == SDL_BUTTON_LEFT) {
-            BulletObject* p_bullet = new BulletObject();
-            if (input_type.change_bullet == 0) {
-				p_bullet->set_bullet_type(BulletObject::SPHERE_SIMPLE_BULLET);
-				Mix_PlayChannel(-1, bullet_sound[0], 0);
-			}
-			else if (input_type.change_bullet == 1) {
-				p_bullet->set_bullet_type(BulletObject::SPHERE_MAX_BULLET);
-				Mix_PlayChannel(-1, bullet_sound[1], 0);
-			}
-			p_bullet->LoadImgBullet(screen);
-
-			if (status == WALK_LEFT && sit_on_ground == false) {
-				p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-				p_bullet->SetRect(this->rect_.x, rect_.y + height_frame * 0.25);
-				p_bullet->set_xy_pos_(x_pos, rect_.y + height_frame * 0.25);
-			}
-			else if (status == WALK_RIGHT && sit_on_ground == false) {
-				p_bullet->set_bullet_dir(BulletObject::DIR_RIGHT);
-				p_bullet->SetRect(this->rect_.x + width_frame - 20, rect_.y + height_frame * 0.25);
-				p_bullet->set_xy_pos_(x_pos + width_frame - 20, rect_.y + height_frame * 0.25);
-			}
-
-			else if (status == WALK_LEFT && sit_on_ground == true) {
-				p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-				p_bullet->SetRect(this->rect_.x, rect_.y + height_frame * 0.55);
-				p_bullet->set_xy_pos_(x_pos, rect_.y + height_frame * 0.55);
-			}
-
-			else if (status == WALK_RIGHT && sit_on_ground == true) {
-				p_bullet->set_bullet_dir(BulletObject::DIR_RIGHT);
-				p_bullet->SetRect(this->rect_.x + width_frame - 20, rect_.y + height_frame * 0.55);
-				p_bullet->set_xy_pos_(x_pos + width_frame - 20, rect_.y + height_frame * 0.55);
-			}
-
-			else {
-				p_bullet->set_bullet_dir(BulletObject::DIR_RIGHT);
-				p_bullet->set_xy_pos_(x_pos + width_frame - 20, rect_.y + height_frame * 0.25);
-			}
-
-			p_bullet->set_x_val(20);
-			p_bullet->set_y_val(20);
-			p_bullet->set_is_move(true);
-			p_bullet_list.push_back(p_bullet);
-
-        }*/
-    }
 }
 void CharacterObject::HandleBullet(Map& map_data, SDL_Renderer* des)
 {

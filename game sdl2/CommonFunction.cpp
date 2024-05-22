@@ -12,7 +12,6 @@ bool SDLCommonFunction::CheckCollision (const SDL_Rect& object1, const SDL_Rect&
 	int top_b = object2.y;
 	int bottom_b = object2.y + object2.h;
 
-	// Case 1: size object 1 < size object 2
 	if (left_a > left_b && left_a < right_b) {
 		if (top_a > top_b && top_a < bottom_b) {
 			return true;
@@ -37,7 +36,6 @@ bool SDLCommonFunction::CheckCollision (const SDL_Rect& object1, const SDL_Rect&
 		}
 	}
 
-	// Case 2: size object 1 < size object 2
 	if (left_b > left_a && left_b < right_a) {
 		if (top_b > top_a && top_b < bottom_a) {
 			return true;
@@ -62,7 +60,6 @@ bool SDLCommonFunction::CheckCollision (const SDL_Rect& object1, const SDL_Rect&
 		}
 	}
 
-	// Case 3: size object 1 = size object 2
 	if (top_a == top_b && right_a == right_b && bottom_a == bottom_b) {
 		return true;
 	}
@@ -70,9 +67,9 @@ bool SDLCommonFunction::CheckCollision (const SDL_Rect& object1, const SDL_Rect&
 	return false;
 }
 int SDLCommonFunction::ShowMenu(SDL_Renderer* g_screen, TTF_Font* font,
-    const std::string& menu1,
-    const std::string& menu2,
-    const std::string& img_name)
+    const string& menu1,
+    const string& menu2,
+    const string& img_name)
 {
     char* ch1 = (char*)menu1.c_str();
     char* ch2 = (char*)menu2.c_str();
@@ -204,7 +201,7 @@ int SDLCommonFunction::ShowMenu(SDL_Renderer* g_screen, TTF_Font* font,
 
 int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, const std::string& menuHelp, const std::string& img_name)
 {
-    char* ch1 = (char*)menuHelp.c_str(); // Play game
+    char* ch1 = (char*)menuHelp.c_str();
 
     char* img_file = (char*)img_name.c_str();
 
@@ -213,17 +210,15 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
     int time = 0;
     int x = 0;
     int y = 0;
-    //const int kMenuNum = 2;
     const int kMenuNum = 1;
     char* labels[kMenuNum];
 
     labels[0] = new char[size1 + 1];
 
-    strcpy_s(labels[0], size1 + 1, ch1); // copy chuỗi ch1 vào labels[0]
+    strcpy_s(labels[0], size1 + 1, ch1);
 
     SDL_Texture* menu[kMenuNum];
     bool selected[kMenuNum] = { 0 };
-    // Ban đầu chữ màu trắng -> click vào thì chuyển sang màu đỏ
     SDL_Color color[2] = { { 255, 255, 255 },{ 255, 0, 0 } };
 
     Text text_object[kMenuNum];
@@ -236,15 +231,14 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
     pos[0].y = 10;
 
     const int conNum = 9;
-    // Nội dung hướng dẫn sử dụng
-    std::string con[conNum];
+    string con[conNum];
     con[0] = "ENTER              ON/OFF MUSIC";
     con[1] = "ESC                PAUSE GAME ?";
     con[2] = "LEFT               LEFT  ARROW";
     con[3] = "RIGHT              RIGHT ARROW";
     con[4] = "SIT                DOWN  ARROW";
-    con[5] = "JUMP               RIGHT CLICK";
-    con[6] = "SHOOT              LEFT  CLICK";
+    con[5] = "JUMP               UP ARROW";
+    con[6] = "SHOOT              1";
     con[7] = "CHANGE BULLET      F OR G";
     con[8] = "(IF YOU HAVE MORE THAN 1 BULLET STYLE)";
 
@@ -367,14 +361,14 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
 }
 
 int SDLCommonFunction::ShowMenuFinal(SDL_Renderer* g_screen, TTF_Font* font,
-    const std::string& menu1,
-    const std::string& menu2,
-    const std::string& menu3,
-    const std::string& img_name)
+    const string& menu1,
+    const string& menu2,
+    const string& menu3,
+    const string& img_name)
 {
-    char* ch1 = (char*)menu1.c_str(); // Play game
-    char* ch2 = (char*)menu2.c_str(); // Help
-    char* ch3 = (char*)menu3.c_str(); // Exit
+    char* ch1 = (char*)menu1.c_str();
+    char* ch2 = (char*)menu2.c_str();
+    char* ch3 = (char*)menu3.c_str();
     char* img_file = (char*)img_name.c_str();
 
     int size1 = menu1.length();
@@ -384,7 +378,7 @@ int SDLCommonFunction::ShowMenuFinal(SDL_Renderer* g_screen, TTF_Font* font,
     int time = 0;
     int x = 0;
     int y = 0;
-    //const int kMenuNum = 2;
+
     const int kMenuNum = 3;
     char* labels[kMenuNum];
 
@@ -392,13 +386,12 @@ int SDLCommonFunction::ShowMenuFinal(SDL_Renderer* g_screen, TTF_Font* font,
     labels[1] = new char[size2 + 1];
     labels[2] = new char[size3 + 1];
 
-    strcpy_s(labels[0], size1 + 1, ch1); // copy chuỗi ch1 vào labels[0]
+    strcpy_s(labels[0], size1 + 1, ch1);
     strcpy_s(labels[1], size2 + 1, ch2);
     strcpy_s(labels[2], size3 + 1, ch3);
 
     SDL_Texture* menu[kMenuNum];
     bool selected[kMenuNum] = { 0, 0, 0 };
-    // Ban đầu chữ màu trắng -> click vào thì chuyển sang màu đỏ
     SDL_Color color[2] = { { 255, 255, 255 },{ 255, 0, 0 } };
 
     Text text_object[kMenuNum];

@@ -33,35 +33,35 @@ bool InitData()
     else {
         g_screen = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
         if (g_screen == NULL) {
-            cout << "Renderer could not be created! SDL Error: \n" << SDL_GetError();
+            cout << "SDL Error: \n" << SDL_GetError();
 			success = false;
         }
         else {
             SDL_SetRenderDrawColor(g_screen, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR);
 			int imgFlags = IMG_INIT_PNG;
 			if (!(IMG_Init(imgFlags) && imgFlags)) {
-				cout << "SDL_image could not initialize! SDL_image Error: \n" << IMG_GetError();
+				cout << "SDL_image Error: \n" << IMG_GetError();
 				success = false;
 			}
         }
         if (TTF_Init() == -1) {
-            cout << "SDL_ttf could not initialize! SDL_ttf Error: \n" << TTF_GetError();
+            cout << "SDL_ttf Error: \n" << TTF_GetError();
             success = false;
         }
         font_time = TTF_OpenFont("font//dlxfont.ttf", 15);
         if (font_time == NULL) {
-            cout << "Failed to load dlxfont! SDL_ttf Error: \n" << TTF_GetError();
+            cout << "Khong load duoc dlxfont! SDL_ttf Error: \n" << TTF_GetError();
 			success = false;
         }
         font_menu = TTF_OpenFont("font//ARCADE.ttf", 80/*Kích thước*/);
 		if (font_menu == NULL) {
-			cout << "Failed to load ARCADE font! SDL_ttf Error: \n" << TTF_GetError();
+			cout << "Khong load duoc ARCADE! SDL_ttf Error: \n" << TTF_GetError();
 			success = false;
 		}
 
 		font_load = TTF_OpenFont("font//COOPBL.ttf", 60/*Kích thước*/);
 		if (font_load == NULL) {
-			cout << "Failed to load dlxfont! SDL_ttf Error: \n" << TTF_GetError();
+			cout << "Khong load duoc dlxfont! SDL_ttf Error: \n" << TTF_GetError();
 			success = false;
 		}
     }
@@ -607,7 +607,7 @@ again_label:
 
         int val = MAX_MAP_X * TILE_SIZE - (map_data.start_x + p_player.GetRect().x);
 		if (val <= SCREEN_WIDTH + 11000) {
-			if (bossdied < 10) {
+			if (bossdied < 25) {
 				bossObject->SetMapXY(map_data.start_x, map_data.start_y);
 				bossObject->DoPlayer(map_data);
 				bossObject->MakeBullet(g_screen, 400, 400);
@@ -685,7 +685,7 @@ again_label:
 							Mix_PlayChannel(-1, g_sound_exp[1], 0);
 							p_player.RemoveBullet(i);
 							bossdied++;
-							if (bossdied >= 10) {
+							if (bossdied >= 25) {
 								mark_value += 10;
 								bossObject->Free();
 								boss.pop_back();
