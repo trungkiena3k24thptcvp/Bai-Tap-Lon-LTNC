@@ -14,7 +14,7 @@
    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/3f863252-d1c4-4e35-824f-179a9e3d787d)
    + Nhấn nút Play Game để bắt đầu chơi.
    + Nhấn nút Help để hướng dẫn các chức năng của game.
-     ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/24e6be22-43d3-4ced-a1d5-7a8bd4df6806)
+    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/43b1068b-0681-4399-be72-90f92e370e97)
    + Nhấn nút Exit để thoát game.
 ## 2. Các thành phần
 ## a. Nhân vật game:
@@ -43,6 +43,7 @@
  - Khi ta chạm vào quái vật hoặc trúng đạn hay bị rơi xuống vực ta sẽ bị mất 1 mạng.
  - Ta sẽ bất tử khoảng 1s sau khi hồi sinh.
  - Khi hồi sinh nhân vật sẽ rơi từ trên trời xuống trước cách vị trí mà ta mất mạng.
+ - Nhấn phím Enter để bật/tắt âm thanh.
 ## 3. Về source code của game
  - File CommonFunction.cpp và CommonFunction.h để chứa các hàm thông dụng, cơ bản nhất của game và các thông số.
  - File GameMap.cpp và GameMap.h để tạo ra và hiển thị các map lên màn hình.
