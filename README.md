@@ -2,7 +2,7 @@
 ## Giới Thiệu:
  Game thuộc thể loại bắn súng. Hãy cùng nhập vai nhân vật và chiến đấu với quái vật để bảo vệ thế giới.
  - [1. Bắt đầu game](#1-bắt-đầu-game)
-## 1.Bắt đầu game
+## 1. Bắt đầu game
  - Màn hình Load Game:
    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/ce82dbd5-a5cc-44b1-b68e-ce0bd3746e03)
  - Menu:
