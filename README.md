@@ -13,7 +13,7 @@
  - Màn hình Load Game:
    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/ce82dbd5-a5cc-44b1-b68e-ce0bd3746e03)
  - Menu:
-   ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/3f863252-d1c4-4e35-824f-179a9e3d787d)
+   ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/2efd4057-0120-48eb-abf9-2090cda1fc2c)
    + Nhấn nút Play Game để bắt đầu chơi.
    + Nhấn nút Help để hướng dẫn các chức năng của game.
     ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/43b1068b-0681-4399-be72-90f92e370e97)
