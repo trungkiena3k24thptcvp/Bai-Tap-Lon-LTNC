@@ -22,7 +22,7 @@
 ## a. Nhân vật game:
  - Ban đầu bạn sẽ có 2 mạng và khi số mạng giảm về 0 bạn sẽ GAME OVER.
  - Vũ khí là súng và sẽ bắn ra đạn để tiêu diệt quái vật.
-   ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/5887239e-3598-411c-b23d-6724da90c575)
+   ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/3f980a60-a02f-4373-856e-fd33bc912a33)
  - Mỗi khi chạm vào hình trái tim ở trên bản đồ, bạn sẽ được cộng thêm 1 mạng.
    ![19](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/4f4fe8ce-5eb6-46df-917b-96360a4c5144)
  - Mỗi khi chạm vào đồng tiền, số tiền của bạn sẽ tăng lên.
