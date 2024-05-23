@@ -7,6 +7,8 @@
  - [b. Quái vật:](#b-quái-vật)
  - [c. Hướng dẫn:](#c-hướng-dẫn)
  - [3. Về source code của game](#3-về-source-code-của-game)
+ - [4. Tài liệu tham khảo](#4-tài-liệu-tham-khảo)
+ - [5. Một số bug chưa fix được](#5-một-số-bug-chưa-fix-được)
 ## 1. Bắt đầu game
  - Màn hình Load Game:
    ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/ce82dbd5-a5cc-44b1-b68e-ce0bd3746e03)
@@ -56,6 +58,13 @@
  - File ThreatObject.cpp và ThreatObject.h để thiết lập các thông số cho quái vật.
  - File BossObject.cpp và BossObject.h để kiểm soát thông số của Boss.
  - Và một vài file khác (Tải source code để biết thêm chi tiết).
+## 4. Tài liệu tham khảo 
+ - Lazyfoo
+ - Youtube
+## 5. Một vài bug chưa fix được
+ - Quái vật bị mắc kẹt
+ - Đạn 1 số quái vật bị bắn ra sau đầu
+ - Chưa add thêm các map type.
 
 
 
