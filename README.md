@@ -33,7 +33,7 @@
  - Quái vật đứng yên và bắn ra loại đạn trong 1 khoảng nhất định.
  ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/d91a1f91-ebfd-494d-a0e7-f468d154432a)
  - Quái vật động di chuyển trong một khoảng nhất định.
-![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/4fcd265e-f501-4295-9208-f6577c0c6836)
+![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/c73834c5-eff5-421d-adbb-fbd100de3090)
  - Quái vật bay trên trời.
 ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/db22131a-dd8d-444f-97c5-f90b23f80a7e)
  - Boss là một con rồng ngàn tuổi khổng lồ
