@@ -31,7 +31,7 @@
    ![18](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/0ed628b0-fd08-4000-96a7-0d7f24bd9aef)
 ## b. Quái vật:
  - Quái vật đứng yên và bắn ra loại đạn trong 1 khoảng nhất định.
- ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/d91a1f91-ebfd-494d-a0e7-f468d154432a)
+![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/dc421f6c-f2e8-4fdf-b95b-82903dd01934)
  - Quái vật động di chuyển trong một khoảng nhất định.
 ![image](https://github.com/trungkiena3k24thptcvp/Bai-Tap-Lon-LTNC/assets/162546220/c73834c5-eff5-421d-adbb-fbd100de3090)
  - Quái vật bay trên trời.
