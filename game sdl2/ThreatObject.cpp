@@ -42,6 +42,16 @@ void ThreatObject::set_clips() {
 		}
 	}
 }
+void ThreatObject::set_clips4() {
+	if (width_frame > 0 && height_frame > 0) {
+		for (int i = 0; i < 4; i++) {
+			frame_clip[i].x = i * width_frame;
+			frame_clip[i].y = 0;
+			frame_clip[i].w = width_frame;
+			frame_clip[i].h = height_frame;
+		}
+	}
+}
 void ThreatObject::Show (SDL_Renderer* des) {
 	if (come_back_time == 0) {
 		rect_.x = x_pos - map_x;
@@ -191,20 +201,20 @@ void ThreatObject::ImpMoveType (SDL_Renderer* screen) {
 				input_type.right = 0;
 				input_type.stop = 0;
 				status = 0; // left
-				LoadImg("IMG//threat_left.png", screen);
+				LoadImg("IMG//goku_left.png", screen);
 			}
 			else if (x_pos < animation_a || (input_type.stop == 1 && input_type.left == 1)) {
 				input_type.left = 0;
 				input_type.right = 1;
 				input_type.stop = 0;
 				status = 1; // right
-				LoadImg("IMG//threat_right.png", screen);
+				LoadImg("IMG//goku_right.png", screen);
 			}
 		}
 		else
 		{
 			if (input_type.left == 1) {
-				LoadImg("IMG//threat_left.png", screen);
+				LoadImg("IMG//goku_left.png", screen);
 			}
 		}
 	}
@@ -246,11 +256,11 @@ void ThreatObject::DoPlayer (Map& gMap) {
 void ThreatObject::InitBullet(BulletObject* p_bullet, SDL_Renderer* screen)
 {
     if (p_bullet != NULL) {
-        p_bullet->set_bullet_type(BulletObject::THREAT_BULLET);
+        p_bullet->set_bullet_type(BulletObject::LASER_BULLET);
         p_bullet->LoadImgBullet(screen);
         p_bullet->set_is_move(true);
         p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-        p_bullet->SetRect(rect_.x + 10, rect_.y + 10);
+        p_bullet->SetRect(rect_.x + 10, rect_.y + 25);
         p_bullet->set_x_val(15);
         bullet_list.push_back(p_bullet);
     }
@@ -262,18 +272,18 @@ void ThreatObject::InitBullet1(BulletObject* p_bullet, SDL_Renderer* screen)
         p_bullet->LoadImgBullet(screen);
         p_bullet->set_is_move(true);
         p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-        p_bullet->SetRect(rect_.x + 10, rect_.y + 10);
-        p_bullet->set_x_val(15);
+        p_bullet->SetRect(rect_.x + 10, rect_.y + 20);
+        p_bullet->set_x_val(10);
         bullet_list.push_back(p_bullet);
     }
 }
 void ThreatObject::ResetBullet(BulletObject* p_bullet)
 {
 	if (p_bullet->get_bullet_type() == MOVE_IN_SPACE_THREAT) {
-		p_bullet->SetRect(rect_.x + 20, y_pos + 18);
+		p_bullet->SetRect(rect_.x + 20, y_pos + 20);
 	}
 	else if (p_bullet->get_bullet_type() == STATIC_THREAT) {
-		p_bullet->SetRect(rect_.x + 20, y_pos + 10);
+		p_bullet->SetRect(rect_.x + 20, y_pos + 20);
 	}
 	p_bullet->set_x_val(15);
 }
@@ -294,7 +304,7 @@ void ThreatObject::MakeBullet(SDL_Renderer* screen, const int& x_limit, const in
             }
             else {
                 p_bullet->set_is_move(true);
-                p_bullet->SetRect(rect_.x + 5, rect_.y + 10);
+                p_bullet->SetRect(rect_.x + 5, rect_.y + 20);
             }
         }
     }

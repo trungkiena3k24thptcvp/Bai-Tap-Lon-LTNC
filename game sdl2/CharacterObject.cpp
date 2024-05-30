@@ -409,7 +409,6 @@ void CharacterObject::CheckMap(Map& map_data, Mix_Chunk* g_sound_effect[2])
 					y_pos = y2 * TILE_SIZE;
 					y_pos -= height_frame + 1;
 					y_val = 0;
-
 					on_ground = true;
 
 					if (status == WALK_NONE) {

@@ -26,6 +26,7 @@ public:
     float get_y_pos() const {return y_pos;}
     void SetMapXY(const int& mp_x, const int& mp_y) {map_x = mp_x; map_y = mp_y;}
     void set_clips();
+    void set_clips4();
     bool LoadImg(string path, SDL_Renderer* screen);
     void Show(SDL_Renderer* des);
     int get_width_frame() const {return width_frame;}

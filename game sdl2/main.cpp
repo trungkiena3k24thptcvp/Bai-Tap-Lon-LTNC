@@ -236,7 +236,7 @@ vector<ThreatObject*> MakeThreatList()
     for (int i = 0; i < 10; i++) {
         ThreatObject* p_threat = (dynamic_threat + i);
         if (p_threat != NULL) {
-            p_threat->LoadImg("IMG//threat_left.png", g_screen);
+            p_threat->LoadImg("IMG//goku_left.png", g_screen);
             p_threat->set_clips();
             p_threat->set_type_move(ThreatObject::MOVE_IN_SPACE_THREAT);
             p_threat->set_x_pos(500 + i * 500);
@@ -279,7 +279,7 @@ vector<ThreatObject*> MakeThreatList()
     for (int i = 0; i < 20; i++) {
         ThreatObject* p_threat = (threat_objs + i);
         if (p_threat != NULL) {
-            p_threat->LoadImg("IMG//threat_level.png", g_screen);
+            p_threat->LoadImg("IMG//goku_static.png", g_screen);
             p_threat->set_clips();
             p_threat->set_x_pos(600 + i * 1200);
             p_threat->set_y_pos(250);
@@ -300,7 +300,7 @@ int main(int argc, char* argv[])
     bool is_quit = false;
     if (LoadGame() >= 100) {
       menu:
-        int ret_menu = SDLCommonFunction::ShowMenuFinal(g_screen, font_menu, "Play game", "Help", "Exit", "IMG//menu_background.png");
+        int ret_menu = SDLCommonFunction::ShowMenuFinal(g_screen, font_menu, "Play game", "Help", "Exit", "IMG//Menu.png");
         if (ret_menu == 2) {
             is_quit = true;
         }

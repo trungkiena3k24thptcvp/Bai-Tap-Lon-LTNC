@@ -74,25 +74,20 @@ int SDLCommonFunction::ShowMenu(SDL_Renderer* g_screen, TTF_Font* font,
     char* ch1 = (char*)menu1.c_str();
     char* ch2 = (char*)menu2.c_str();
     char* img_file = (char*)img_name.c_str();
-
     int size1 = menu1.length();
     int size2 = menu2.length();
-
     int time = 0;
     int x = 0;
     int y = 0;
     const int kMenuNum = 2;
     char* labels[kMenuNum];
-
     labels[0] = new char[size1 + 1];
     labels[1] = new char[size2 + 1];
-
     strcpy_s(labels[0], size1 + 1, ch1);
     strcpy_s(labels[1], size2 + 1, ch2);
-
     SDL_Texture* menu[kMenuNum];
-    bool selected[kMenuNum] = { 0, 0 };
-    SDL_Color color[2] = { { 255, 255, 255 },{ 255, 0, 0 } };
+    bool selected[kMenuNum] = {0, 0};
+    SDL_Color color[2] = {{ 255, 255, 255},{255, 0, 0}};
 
     Text text_object[kMenuNum];
     text_object[0].SetText(labels[0]);
@@ -199,7 +194,7 @@ int SDLCommonFunction::ShowMenu(SDL_Renderer* g_screen, TTF_Font* font,
     return 0;
 }
 
-int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, const std::string& menuHelp, const std::string& img_name)
+int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, const string& menuHelp, const string& img_name)
 {
     char* ch1 = (char*)menuHelp.c_str();
 
@@ -219,7 +214,7 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
 
     SDL_Texture* menu[kMenuNum];
     bool selected[kMenuNum] = { 0 };
-    SDL_Color color[2] = { { 255, 255, 255 },{ 255, 0, 0 } };
+    SDL_Color color[2] = {{255, 255, 255},{255, 0, 0 }};
 
     Text text_object[kMenuNum];
     text_object[0].SetText(labels[0]);
@@ -253,8 +248,8 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
     SDL_Rect posCon[conNum];
     for (int i = 0; i < conNum; i++)
     {
-        posCon[i].x = SCREEN_WIDTH /3.4;
-        posCon[i].y = SCREEN_HEIGHT/3 + 30*i;
+        posCon[i].x = SCREEN_WIDTH / 3.4;
+        posCon[i].y = SCREEN_HEIGHT/ 3 + 30 * i;
     }
 
     BaseObject gBackground;
@@ -281,8 +276,7 @@ int SDLCommonFunction::ShowMenuHelp(SDL_Renderer* g_screen, TTF_Font* font, cons
                 y = event.motion.y;
                 for (int i = 0; i < kMenuNum; ++i)
                 {
-                    if (x >= pos[i].x && x <= pos[i].x + pos[i].w &&
-                        y >= pos[i].y && y <= pos[i].y + pos[i].h)
+                    if (x >= pos[i].x && x <= pos[i].x + pos[i].w && y >= pos[i].y && y <= pos[i].y + pos[i].h)
                     {
                         if (!selected[i])
                         {
@@ -391,8 +385,8 @@ int SDLCommonFunction::ShowMenuFinal(SDL_Renderer* g_screen, TTF_Font* font,
     strcpy_s(labels[2], size3 + 1, ch3);
 
     SDL_Texture* menu[kMenuNum];
-    bool selected[kMenuNum] = { 0, 0, 0 };
-    SDL_Color color[2] = { { 255, 255, 255 },{ 255, 0, 0 } };
+    bool selected[kMenuNum] = {0, 0, 0};
+    SDL_Color color[2] = {{ 255, 255, 255},{255, 0, 0 }};
 
     Text text_object[kMenuNum];
     text_object[0].SetText(labels[0]);
